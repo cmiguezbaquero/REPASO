@@ -104,29 +104,26 @@ public class Main {
     }
 }
 */
-
     //Ejercicio 5 : Cálculo de Órbita Estabilizada
 
-        Scanner scanner = new Scanner(System.in);
-        int altOrbita = scanner.nextInt();
-        estabOrbita(altOrbita);
+    Scanner scanner = new Scanner(System.in);
+        int altOrbita;
 
         do {
-            System.out.println("Altura de la órbita : ");
-            altOrbita = scanner.nextInt();
+        System.out.println("Altura de la órbita : ");
+        altOrbita = scanner.nextInt();
 
-        } while (altOrbita >= 200 && altOrbita <= 500);{
-        }
+        } while (altOrbita < 200 || altOrbita > 500);
+
+        double tiempo = estabOrb(altOrbita);
+        System.out.println("Tiempo de estabilización " + tiempo + "tiempo.");
+}
+    public static double estabOrb (int altOrbita){
+        return (altOrbita - 200) * 1.5;
 
     }
-        public static void estabOrbita ( int altOrbita){
+}
 
-            double tiempo = (altOrbita - 200) * 1.5;
-            System.out.println("Tiempo de estabilización " + tiempo + "tiempo.");
-
-
-        }
-    }
 
 
 
